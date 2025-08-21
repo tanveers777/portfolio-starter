@@ -14,7 +14,7 @@ jobs:
 
       - name: Create frontend config file with GitHub variable
         run: |
-          echo "window.CONFIG = { STOREDOBFUSCATED: '${{ vars.STOREDOBFUSCATED }}' };" > public/config.js
+          echo "window.CONFIG = { STOREDOBFUSCATED: '${{ vars.STOREDOBFUSCATED }}' };" > config.js
 
       # Optional: Add deployment step here if you're using GitHub Pages or Vercel etc.
       # - name: Deploy...
