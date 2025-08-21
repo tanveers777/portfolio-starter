@@ -1,0 +1,20 @@
+name: Inject config variable
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create frontend config file with GitHub variable
+        run: |
+          echo "window.CONFIG = { STOREDOBFUSCATED: '${{ vars.STOREDOBFUSCATED }}' };" > public/config.js
+
+      # Optional: Add deployment step here if you're using GitHub Pages or Vercel etc.
+      # - name: Deploy...

@@ -1,5 +1,5 @@
 console.log("Portfolio loaded!");
-console.log(process);
+console.log("Variable from GitHub Actions:", window.CONFIG);
 function simpleHash(str) {
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
